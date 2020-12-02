@@ -5,6 +5,7 @@ import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import victorm.day10.ExceptionHandling;
 import victorm.day_2.Two;
 import victorm.day_3.CompareNumber;
 import victorm.day_4.SwitchExample;
@@ -30,19 +31,37 @@ public class Program {
 	 */
 	public static void main(String[] args) {
 		Test1();
-	
+		
+		
 	}
 	
 	public static void Test1() {
-		
-		MemberInnerClass mic = new OuterClass().new MemberInnerClass();
-		ImplementingClass ic = new OuterClass().new ImplementingClass();
-		
-		
-		mic.printMessage();
-		new OuterClass.InnerStaticClass().printMessage();
-		ic.printMessage();
-		
+		ExceptionHandling eh = new ExceptionHandling();
+		eh.GeneralExceptionHandle();
+		try {
+			Test2();
+		}catch(Throwable t) {
+			System.out.println("==============Exception Found:==================");
+			t.printStackTrace();
+			try {
+				Test3();
+			}catch(Throwable tt) {
+				System.out.println("==============Exception Found:==================");
+				System.out.println("This is a custom Exception");
+				t.printStackTrace();
+				System.out.println("All Exceptions Caught");
+			}
+		}
+	}
+	
+	public static void Test2() throws Throwable {
+		ExceptionHandling eh = new ExceptionHandling();
+		eh.ThrowAnException();
+	}
+	
+	public static void Test3() throws Throwable {
+		ExceptionHandling eh = new ExceptionHandling();
+		eh.ThrowCustomException();
 	}
 	
 }
