@@ -1,29 +1,32 @@
 package victorm.principal;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import victorm.day10.ExceptionHandling;
-import victorm.day_2.Two;
-import victorm.day_3.CompareNumber;
-import victorm.day_4.SwitchExample;
-import victorm.day_5.EmployeeInfo;
-import victorm.day_6.ExtendsSubClass;
-import victorm.day_6.ISubClass;
-import victorm.day_6.SubClass;
-import victorm.day_7.Calculator;
-import victorm.day_7.Circle;
-import victorm.day_7.Oval;
-import victorm.day_7.Rectangle;
-import victorm.day_7.Shape;
-import victorm.day_7.ShapeDrawer;
-import victorm.day_7.Square;
-import victorm.day_8.Encapsulation;
-import victorm.day_9.OuterClass;
-import victorm.day_9.OuterClass.ImplementingClass;
-import victorm.day_9.OuterClass.MemberInnerClass;
+import victorm.day_02.Two;
+import victorm.day_03.CompareNumber;
+import victorm.day_04.SwitchExample;
+import victorm.day_05.EmployeeInfo;
+import victorm.day_06.ExtendsSubClass;
+import victorm.day_06.ISubClass;
+import victorm.day_06.SubClass;
+import victorm.day_07.Calculator;
+import victorm.day_07.Circle;
+import victorm.day_07.Oval;
+import victorm.day_07.Rectangle;
+import victorm.day_07.Shape;
+import victorm.day_07.ShapeDrawer;
+import victorm.day_07.Square;
+import victorm.day_08.Encapsulation;
+import victorm.day_09.OuterClass;
+import victorm.day_09.OuterClass.ImplementingClass;
+import victorm.day_09.OuterClass.MemberInnerClass;
+import victorm.day_11.ExceptionHandling;
+import victorm.day_12.Assignment_Day_12;
+import victorm.day_12.Employee;
 
 public class Program {
 	/*
@@ -35,33 +38,27 @@ public class Program {
 		
 	}
 	
-	public static void Test1() {
-		ExceptionHandling eh = new ExceptionHandling();
-		eh.GeneralExceptionHandle();
-		try {
-			Test2();
-		}catch(Throwable t) {
-			System.out.println("==============Exception Found:==================");
-			t.printStackTrace();
-			try {
-				Test3();
-			}catch(Throwable tt) {
-				System.out.println("==============Exception Found:==================");
-				System.out.println("This is a custom Exception");
-				t.printStackTrace();
-				System.out.println("All Exceptions Caught");
-			}
-		}
+	public static <T> void Test1() {
+		Assignment_Day_12 ad12 = new Assignment_Day_12();
+		ArrayList ar = new ArrayList();
+		ar.add("Hello");
+		ar.add("World");
+		
+		ad12.PartOne(ar, "World");
+		System.out.println(ar.contains("World"));
+		
+		int[][] matrix = ad12.PopulateArray(new int[20][10]);
+		System.out.println(ad12.PartTwo(matrix));
+		
+		T[][] matrixT = (T[][]) new String[10][20];
+		System.out.println(ad12.PartThree(matrixT,"hello"));
+		
+		ar.add("World");
+		ar.add("Love Collections");
+		ad12.PartFour(ar);
+		
+		ArrayList<Employee> emp = new ArrayList();
+		ad12.PartFive(emp);
+		
 	}
-	
-	public static void Test2() throws Throwable {
-		ExceptionHandling eh = new ExceptionHandling();
-		eh.ThrowAnException();
-	}
-	
-	public static void Test3() throws Throwable {
-		ExceptionHandling eh = new ExceptionHandling();
-		eh.ThrowCustomException();
-	}
-	
 }
