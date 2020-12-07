@@ -27,14 +27,15 @@ import victorm.day_09.OuterClass.MemberInnerClass;
 import victorm.day_11.ExceptionHandling;
 import victorm.day_12.Assignment_Day_12;
 import victorm.day_12.Employee;
+import victorm.day_14.Day14;
 
 public class Program {
 	/*
 	 * @author Victor M. 
 	 */
 	public static void main(String[] args) {
-		Test1();
 		
+		Test2();
 		
 	}
 	
@@ -60,5 +61,11 @@ public class Program {
 		ArrayList<Employee> emp = new ArrayList();
 		ad12.PartFive(emp);
 		
+	}
+
+	public static void Test2() {
+		Day14 d14 = new Day14();
+		
+		d14.PrintEmployeeeResults();
 	}
 }
