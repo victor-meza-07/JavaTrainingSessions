@@ -3,6 +3,8 @@ package victorm.day_14;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
@@ -14,7 +16,7 @@ public class Day14 {
 	Set<Employee> EmployeeHashSet;
 	Map<String, Company> CompanySet;
 	Set<Student> StudentHash;
-	Stack<Book> BookStack;
+	List<Book> BookLinkedList;
 	Student test;
 	
 	public Day14() {
@@ -22,7 +24,7 @@ public class Day14 {
 		EmployeeHashSet = new LinkedHashSet<Employee>();
 		CompanySet = new HashMap<String, Company>();
 		StudentHash = new LinkedHashSet<Student>();
-		BookStack = new Stack<Book>();
+		BookLinkedList = new LinkedList<Book>();
 		populateSet();
 		TestLastHash();
 	}
@@ -44,7 +46,7 @@ public class Day14 {
 			test = s;
 			
 			Book b = PopulateBook(i);
-			BookStack.push(b);
+			BookLinkedList.add(b);
 			
 			
 		}
@@ -66,7 +68,7 @@ public class Day14 {
 			System.out.println(s.name);
 			System.out.println("-------------------------------------------------");
 		}
-		for(Book b:BookStack) {
+		for(Book b:BookLinkedList) {
 			System.out.println("Printing from bottom to top");
 			System.out.println(b.name);
 		}
