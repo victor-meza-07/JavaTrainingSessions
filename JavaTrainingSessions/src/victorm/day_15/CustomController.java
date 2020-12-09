@@ -14,7 +14,7 @@ public class CustomController {
 	private Secret s;
 	private String username = s.getSQLUsername();
 	private String password = s.getSQLPassword();
-	private String url = "jdbc:sqlserver://DESKTOP-3FUVOJH\\SQLEXPRESS;databaseName=GalaxE_Assignment;";
+	private String url = s.getSQLUrl();
 	private Statement statement;
 	private Connection connection;
 	
