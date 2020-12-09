@@ -1,5 +1,6 @@
 package victorm.principal;
 
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -28,15 +29,16 @@ import victorm.day_11.ExceptionHandling;
 import victorm.day_12.Assignment_Day_12;
 import victorm.day_12.Employee;
 import victorm.day_14.Day14;
+import victorm.day_15.Application;
+import victorm.day_15.CustomController;
+import victorm.day_15.User;
 
 public class Program {
 	/*
 	 * @author Victor M. 
 	 */
 	public static void main(String[] args) {
-		
-		Test2();
-		
+		Test3();
 	}
 	
 	public static <T> void Test1() {
@@ -67,5 +69,16 @@ public class Program {
 		Day14 d14 = new Day14();
 		
 		d14.PrintEmployeeeResults();
+	}
+
+	public static void Test3() {
+		// User was not found!
+		//Fix that and add the secret to git ignore. 
+		
+		
+		
+		
+		Application a = new Application();
+		a.RunPrompt();
 	}
 }

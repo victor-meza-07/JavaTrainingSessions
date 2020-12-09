@@ -11,6 +11,8 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.TreeSet;
 
+import victorm.principal.Secret;
+
 public class Day14 {
 	Random r;
 	Set<Employee> EmployeeHashSet;
@@ -18,6 +20,7 @@ public class Day14 {
 	Set<Student> StudentHash;
 	List<Book> BookLinkedList;
 	Student test;
+	Secret s;
 	
 	public Day14() {
 		r = new Random();
@@ -27,6 +30,7 @@ public class Day14 {
 		BookLinkedList = new LinkedList<Book>();
 		populateSet();
 		TestLastHash();
+		s = new Secret();
 	}
 
 
